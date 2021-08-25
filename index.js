@@ -26,8 +26,10 @@ textField.onkeyup = (e)=>{
         }
 
         if(textField.value){
+            var sum = 0;
             for (var i = 0; i < keys.length; i++) {
                 var key = keys[i];
+                sum += counts[key];
                 //console.log(key + ' ' + counts[key]);
                 if(i == 0)
                     wordsCounter.innerHTML = "Word" + ' : '+ "Occurence";          //if it is the first word, then replace the texts in span tag.
@@ -35,6 +37,7 @@ textField.onkeyup = (e)=>{
                 wordsCounter.innerHTML += "<p>"+key + ' : ' + counts[key]+"</p>";   
             
             }
+            wordsCounter.innerHTML += "Total number of words = "+ sum; 
         }
         else{
         wordsCounter.innerHTML = "<p> Please enter some texts.</p>";        //if textarea become empty.
