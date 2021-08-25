@@ -3,7 +3,7 @@ var wordsCounter = document.getElementById("words-counter");
 
 
 textField.onkeyup = (e)=>{
-    if(e.keyCode === 32 || e.keyCode === 8){
+    if(e.keyCode === 32 || e.keyCode === 8 || e.keyCode === 13){
         var counts = {};                        // taking an empty object in which words will be put as keys and counts[key] as their value.
         var keys = [];                          // an empty array to remember the order of input words.
         let val = textField.value;
