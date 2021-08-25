@@ -1,0 +1,19 @@
+body {
+    background-color: #a6ccebb2;
+    color: #111;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+.wrapper{
+    position: absolute;
+    margin:80px 500px
+}
+
+#text {
+	font-family: sans-serif;
+	width: 500px;
+	height: 100px;
+	margin: 0 auto;
+}
