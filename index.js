@@ -12,7 +12,8 @@ textField.onkeyup = (e)=>{
         console.log(tokens);
         for (var i = 0; i < tokens.length; i++) {
             var word = tokens[i].toLowerCase();
-            if (!/\d+/.test(word))      //checks if the word is containng digit or not.
+            word = word.replace(/[^a-zA-Z ]/g, "");
+            if (!/\d+/.test(word) && word != '')     //checks if the word is containng digit or not.
             {            
               if (counts[word] === undefined) {
                 counts[word] = 1;
